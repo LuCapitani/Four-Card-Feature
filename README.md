@@ -25,7 +25,6 @@
 Users should be able to:
 
 - View the optimal layout depending on their device's screen size (mobile, tablet, desktop)
-- See hover and active states for interactive elements (button)
 - See the product image change between mobile and desktop versions
 - View the card with proper spacing, typography, and border-radius
 
@@ -47,9 +46,8 @@ Users should be able to:
 
 ### Links
 
-* **Solution URL:** 
-* **Site URL:** https://github.com/LuCapitani/Four-Card-Feature
-
+* **Solution URL:** https://github.com/LuCapitani/Four-Card-Feature
+* **Site URL:** https://lucapitani.github.io/Four-Card-Feature/
 ---
 
 ## My Process
