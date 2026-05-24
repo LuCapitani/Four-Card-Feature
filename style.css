@@ -1,0 +1,185 @@
+/* ========== VARIABLES ========== */
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Grey-500: hsl(234, 12%, 34%);
+    --Grey-400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+
+    --principal-family: "Poppins", sans-serif;
+    --paragraph: 15px;
+    --weight-200: 200;
+    --weight-400: 400;
+    --weight-600: 600;
+}
+
+/* ========== RESET ========== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========   MAIN CONTAINER ========== */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--White);
+}
+
+/* ========== TITLES ========== */
+.titles-container {
+    text-align: center;
+    max-width: 540px;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.primary-title,
+.segundary-title,
+.description-title {
+    font-family: var(--principal-family);
+    color: var(--Grey-500);
+}
+
+.primary-title {
+    font-weight: var(--weight-200);
+    font-size: 1.8rem;
+}
+
+.segundary-title {
+    font-weight: var(--weight-600);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.description-title {
+    font-weight: var(--weight-400);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ========== GRID (MOBILE FIRST) ========== */
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+}
+
+/* ========== CARDS ========== */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--White);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-informations {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-titles {
+    font-family: var(--principal-family);
+    font-weight: var(--weight-600);
+    font-size: 1.25rem;
+    color: var(--Grey-500);
+}
+
+.card-description {
+    font-family: var(--principal-family);
+    font-weight: var(--weight-400);
+    font-size: var(--paragraph);
+    color: var(--Grey-400);
+    line-height: 1.6;
+}
+
+.icones-image {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin-left: auto;
+}
+
+/* ========== BORDER CARDS ========== */
+.supervisor {
+    border-top: 5px solid var(--Cyan);
+}
+
+.team-builder {
+    border-top: 5px solid var(--Red);
+}
+
+.karma {
+    border-top: 5px solid var(--Orange);
+}
+
+.calculator {
+    border-top: 5px solid var(--Blue);
+}
+
+/* ========== TABLET (768px) ========== */
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .titles-container {
+        width: 80%;
+    }
+    
+    .primary-title,
+    .segundary-title {
+        font-size: 2rem;
+    }
+}
+
+/* ========== DESKTOP (1024px) ========== */
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .titles-container {
+        width: 540px;
+    }
+    
+    /* position cards (Diamond Format) */
+    .supervisor {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+    
+    .team-builder {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+    
+    .karma {
+        grid-column: 2 / 3;
+        grid-row: 3 / 5;
+    }
+    
+    .calculator {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+    }
+}
